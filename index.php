@@ -11,6 +11,7 @@ try{
     echo "Error". $e->getMessage();
 }
 
+echo "Hello there!"
 
 
 
