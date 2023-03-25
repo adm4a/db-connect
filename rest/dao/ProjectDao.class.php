@@ -1,6 +1,7 @@
 <?php
-    class StudentsDao{
+    class ProjectDao{
 
+        private $conn;
 
         public function __construct(){
             try{
@@ -11,6 +12,13 @@
                 echo "Error". $e->getMessage();
             }
             
+        }
+
+        public function get_all(){
+            $stmt = $this->conn->prepare("SELECT * FROM Users");
+            $stmt->exec();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
         }
     }
 ?>
