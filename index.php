@@ -1,12 +1,5 @@
 <?php
-
-require_once("rest/dao/ProjectDao.class.php");
-$project_dao = new ProjectDao();
-
-$results = $project_dao->get_all();
-print_r($results);
-
-/*header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: PUT, GET, POST, DELETE, OPTIONS, PATCH');
 require 'vendor/autoload.php';
 
@@ -18,7 +11,7 @@ try{
     echo "Error". $e->getMessage();
 }
 
-echo "Hello there!"*/
+echo "Hello there!"
 
 
 
