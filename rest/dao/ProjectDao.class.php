@@ -1,5 +1,8 @@
 <?php
 
+require 'vendor/autoload.php';
+
+
 class ProjectDao{
     private $conn;
     public function __construct()
