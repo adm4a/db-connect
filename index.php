@@ -11,8 +11,15 @@ try{
     echo "Error". $e->getMessage();
 }
 
-echo "Hello there!"
-
-
+Flight::route('GET /api/users', function(){
+    $users = Flight::db()->query('SELECT * FROM Users', PDO::FETCH_ASSOC)->fetchAll();
+    var_dump($users);
+    Flight::json($users);
+    });
+ 
+ 
+ 
+ 
+ Flight::start();
 
 ?>
